@@ -1,0 +1,49 @@
+.wrap {
+  max-width: 640px;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.spam {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-brand-dark);
+  margin-bottom: 30px;
+}
+
+.body {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: 26px;
+}
+
+.body p {
+  margin-bottom: 14px;
+}
+
+.body ul {
+  margin: 0 0 14px 22px;
+  list-style: disc;
+}
+
+.body li {
+  margin-bottom: 6px;
+}
+
+.body a {
+  color: var(--color-accent);
+}

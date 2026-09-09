@@ -1,0 +1,50 @@
+.wrap {
+  max-width: 760px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 24px;
+}
+
+.body {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.body p {
+  margin-bottom: 20px;
+}
+
+.categories {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid var(--color-bg-light);
+}
+
+.categories h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.categoryList a {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--color-bg-light);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.categoryList a:hover {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}

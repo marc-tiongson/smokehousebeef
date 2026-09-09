@@ -1,0 +1,10 @@
+[
+  { "slug": "beef", "name": "Beef" },
+  { "slug": "chicken", "name": "Chicken" },
+  { "slug": "grilltips", "name": "Grill Tips" },
+  { "slug": "pork", "name": "Pork" },
+  { "slug": "rubs", "name": "Rubs" },
+  { "slug": "sauces", "name": "Sauces" },
+  { "slug": "sides", "name": "Sides" },
+  { "slug": "smokersgrills", "name": "Smokers & Grills" }
+]
