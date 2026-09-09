@@ -114,7 +114,7 @@ function FlipTile({
     <div className="elementor-column elementor-col-25 elementor-inner-column elementor-element">
       <div className="elementor-widget-wrap elementor-element-populated">
         <Link href={`/category/${slug}/`} className={styles.tile}>
-          <Image src={bg} alt="" fill className={styles.tileBg} sizes="345px" />
+          <Image src={bg} alt="" width={345} height={312} className={styles.tileBg} />
           <div className={styles.tileOverlay}>
             <Image src={icon} alt={name} width={70} height={70} className={styles.tileIcon} />
           </div>
@@ -313,9 +313,9 @@ export default function HomePage() {
                       <Image
                         src="/images/home/sidebar-bg-guide.webp"
                         alt=""
-                        fill
+                        width={400}
+                        height={600}
                         className={styles.sidebarBoxBg}
-                        sizes="400px"
                       />
                       <div className={styles.sidebarBoxOverlay} />
                       <div className={styles.sidebarBoxContent}>
@@ -403,9 +403,9 @@ export default function HomePage() {
                       <Image
                         src="/images/home/sidebar-bg-reports.webp"
                         alt=""
-                        fill
+                        width={400}
+                        height={700}
                         className={styles.sidebarBoxBg}
-                        sizes="400px"
                       />
                       <div className={`${styles.sidebarBoxOverlay} ${styles.sidebarBoxOverlayStrong}`} />
                       <div className={styles.sidebarBoxContent}>

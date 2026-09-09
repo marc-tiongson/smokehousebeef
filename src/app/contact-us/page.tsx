@@ -21,7 +21,13 @@ export default function ContactUsPage() {
     <div>
       <div className={`${styles.wrap} container`}>
         <div className={styles.hero}>
-          <Image src="/images/contact/hero-bg.webp" alt="" fill className={styles.heroBg} />
+          <Image
+            src="/images/contact/hero-bg.webp"
+            alt=""
+            width={900}
+            height={900}
+            className={styles.heroBg}
+          />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <h1>We Would Love To Hear From You</h1>
