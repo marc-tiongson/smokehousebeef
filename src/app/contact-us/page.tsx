@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import OptInForm from "@/components/OptInForm";
@@ -20,14 +19,10 @@ export default function ContactUsPage() {
   return (
     <div>
       <div className={`${styles.wrap} container`}>
-        <div className={styles.hero}>
-          <Image
-            src="/images/contact/hero-bg.webp"
-            alt=""
-            width={900}
-            height={900}
-            className={styles.heroBg}
-          />
+        <div
+          className={styles.hero}
+          style={{ backgroundImage: "url(/images/contact/hero-bg.webp)" }}
+        >
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <h1>We Would Love To Hear From You</h1>

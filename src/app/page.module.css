@@ -4,19 +4,10 @@
   height: 200px;
   border-radius: 4px;
   overflow: hidden;
-}
-
-.tileBg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.tile:hover .tileBg {
-  transform: scale(1.05);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-brand-dark);
 }
 
 .tileOverlay {
@@ -26,6 +17,16 @@
   align-items: center;
   justify-content: center;
   background: rgba(112, 34, 16, 0.6);
+  transition: background 0.3s ease;
+}
+
+.tile:hover .tileOverlay {
+  background: rgba(112, 34, 16, 0.4);
+}
+
+.tileIcon {
+  width: 70px;
+  height: 70px;
 }
 
 .tileLabel {
@@ -41,15 +42,10 @@
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-}
-
-.sidebarBoxBg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-primary);
 }
 
 .sidebarBoxOverlay {

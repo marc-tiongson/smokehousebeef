@@ -113,10 +113,13 @@ function FlipTile({
   return (
     <div className="elementor-column elementor-col-25 elementor-inner-column elementor-element">
       <div className="elementor-widget-wrap elementor-element-populated">
-        <Link href={`/category/${slug}/`} className={styles.tile}>
-          <Image src={bg} alt="" width={345} height={312} className={styles.tileBg} />
+        <Link
+          href={`/category/${slug}/`}
+          className={styles.tile}
+          style={{ backgroundImage: `url(${bg})` }}
+        >
           <div className={styles.tileOverlay}>
-            <Image src={icon} alt={name} width={70} height={70} className={styles.tileIcon} />
+            <img src={icon} alt={name} className={styles.tileIcon} />
           </div>
         </Link>
         <div className="elementor-element elementor-widget elementor-widget-heading">
@@ -309,14 +312,10 @@ export default function HomePage() {
               <section className="elementor-section elementor-inner-section elementor-element elementor-element-1a0bed2 elementor-section-boxed elementor-section-height-default">
                 <div className="elementor-container elementor-column-gap-default">
                   <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0253f78">
-                    <div className={`elementor-widget-wrap elementor-element-populated ${styles.sidebarBoxWrap}`}>
-                      <Image
-                        src="/images/home/sidebar-bg-guide.webp"
-                        alt=""
-                        width={400}
-                        height={600}
-                        className={styles.sidebarBoxBg}
-                      />
+                    <div
+                      className={`elementor-widget-wrap elementor-element-populated ${styles.sidebarBoxWrap}`}
+                      style={{ backgroundImage: "url(/images/home/sidebar-bg-guide.webp)" }}
+                    >
                       <div className={styles.sidebarBoxOverlay} />
                       <div className={styles.sidebarBoxContent}>
                       <div className="elementor-element elementor-widget elementor-widget-heading">
@@ -399,14 +398,10 @@ export default function HomePage() {
               <section className="elementor-section elementor-inner-section elementor-element elementor-element-0b86273 elementor-section-boxed elementor-section-height-default">
                 <div className="elementor-container elementor-column-gap-default">
                   <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-30994a1">
-                    <div className={`elementor-widget-wrap elementor-element-populated ${styles.sidebarBoxWrap}`}>
-                      <Image
-                        src="/images/home/sidebar-bg-reports.webp"
-                        alt=""
-                        width={400}
-                        height={700}
-                        className={styles.sidebarBoxBg}
-                      />
+                    <div
+                      className={`elementor-widget-wrap elementor-element-populated ${styles.sidebarBoxWrap}`}
+                      style={{ backgroundImage: "url(/images/home/sidebar-bg-reports.webp)" }}
+                    >
                       <div className={`${styles.sidebarBoxOverlay} ${styles.sidebarBoxOverlayStrong}`} />
                       <div className={styles.sidebarBoxContent}>
                       <div className="elementor-element elementor-widget elementor-widget-heading">
