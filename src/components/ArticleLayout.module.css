@@ -1,3 +1,40 @@
+.heroColumn {
+  background: var(--color-brand-dark);
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.heroTitle {
+  color: var(--color-white) !important;
+  font-size: 36px;
+}
+
+.heroMeta :global(.elementor-icon-list-icon),
+.heroMeta :global(.elementor-post-info__item),
+.heroMeta :global(.elementor-post-info__terms-list-item) {
+  color: var(--color-white) !important;
+  fill: var(--color-white) !important;
+}
+
+.heroMeta :global(.elementor-post-info__terms-list-item):hover {
+  color: var(--color-accent) !important;
+}
+
+.heroMeta :global(.elementor-post-info) {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.heroMeta :global(.elementor-icon-list-item) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .body p {
   margin-bottom: 20px;
 }

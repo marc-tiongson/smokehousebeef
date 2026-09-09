@@ -29,27 +29,35 @@ export default function ContactForm() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.field}>
-        <label htmlFor={nameId}>Name</label>
-        <input id={nameId} name="name" type="text" placeholder="Your name" />
+        <label htmlFor={nameId} className={styles.srOnly}>
+          Name
+        </label>
+        <input id={nameId} name="name" type="text" placeholder="Name" />
       </div>
 
       <div className={styles.field}>
-        <label htmlFor={emailId}>Email *</label>
-        <input id={emailId} name="email" type="email" placeholder="you@example.com" required />
+        <label htmlFor={emailId} className={styles.srOnly}>
+          Email
+        </label>
+        <input id={emailId} name="email" type="email" placeholder="Email" required />
       </div>
 
       <div className={styles.field}>
-        <label htmlFor={phoneId}>Phone *</label>
-        <input id={phoneId} name="phone" type="tel" placeholder="(555) 555-5555" required />
+        <label htmlFor={phoneId} className={styles.srOnly}>
+          Phone
+        </label>
+        <input id={phoneId} name="phone" type="tel" placeholder="Phone" required />
       </div>
 
       <div className={styles.field}>
-        <label htmlFor={messageId}>Message</label>
-        <textarea id={messageId} name="message" rows={5} placeholder="How can we help?" />
+        <label htmlFor={messageId} className={styles.srOnly}>
+          Message
+        </label>
+        <textarea id={messageId} name="message" rows={6} placeholder="Message" />
       </div>
 
       <button type="submit" className={styles.submit}>
-        Send
+        Submit
       </button>
     </form>
   );

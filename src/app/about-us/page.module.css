@@ -1,50 +1,95 @@
-.wrap {
-  max-width: 760px;
-  padding-top: 50px;
-  padding-bottom: 70px;
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .title {
   font-size: 34px;
-  margin-bottom: 24px;
-}
-
-.body {
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.body p {
   margin-bottom: 20px;
 }
 
-.categories {
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: 1px solid var(--color-bg-light);
+.recipesSection {
+  padding: 20px 20px 60px;
+  text-align: center;
 }
 
-.categories h2 {
-  font-size: 20px;
-  margin-bottom: 16px;
+.recipesSection h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
-.categoryList {
+.categoryGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 14px;
+  justify-content: center;
+  gap: 40px;
 }
 
-.categoryList a {
-  display: inline-block;
-  padding: 8px 18px;
-  background: var(--color-bg-light);
-  border-radius: 20px;
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+}
+
+.categoryItem span {
   font-size: 14px;
   font-weight: 600;
 }
 
-.categoryList a:hover {
-  background: var(--color-accent);
-  color: var(--color-primary);
+.categoryItem:hover span {
+  color: var(--color-accent);
+}
+
+.gallerySection {
+  background: var(--color-bg-light);
+  padding: 50px 0;
+}
+
+.galleryTitle {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.galleryRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.galleryRowThree {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.galleryRow img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryRowThree {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryRow {
+    grid-template-columns: 1fr;
+  }
 }

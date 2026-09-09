@@ -63,15 +63,15 @@ export default function ArticleLayout({
       <section className="elementor-section elementor-top-section elementor-element elementor-element-a868199 elementor-section-content-middle elementor-section-boxed elementor-section-height-default">
         <div className="elementor-container elementor-column-gap-no">
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-80105a0">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-widget elementor-widget-heading">
+            <div className={`elementor-widget-wrap elementor-element-populated ${styles.heroColumn}`}>
+              <div className="elementor-element elementor-element-fb0ea3f elementor-widget elementor-widget-heading">
                 <div className="elementor-widget-container">
-                  <h1 className="elementor-heading-title elementor-size-default">{title}</h1>
+                  <h1 className={`elementor-heading-title elementor-size-default ${styles.heroTitle}`}>{title}</h1>
                 </div>
               </div>
               {(date || categoryName) && (
-                <div className="elementor-element elementor-align-center elementor-widget elementor-widget-post-info">
-                  <div className="elementor-widget-container">
+                <div className="elementor-element elementor-element-396ed52 elementor-align-center elementor-widget elementor-widget-post-info">
+                  <div className={`elementor-widget-container ${styles.heroMeta}`}>
                     <ul className="elementor-inline-items elementor-icon-list-items elementor-post-info">
                       {date && (
                         <li className="elementor-icon-list-item elementor-inline-item">

@@ -15,6 +15,7 @@
 @import "../styles/vendor/archive-inline.css";
 @import "../styles/vendor/contact-inline.css";
 @import "../styles/vendor/about-inline.css";
+@import "../styles/overrides.css";
 
 :root {
   /* Colors extracted from the site's Elementor global kit */

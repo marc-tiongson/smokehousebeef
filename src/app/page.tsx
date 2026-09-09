@@ -4,18 +4,54 @@ import { getRecipeBySlug } from "@/lib/content";
 import styles from "./page.module.css";
 
 const CATEGORY_TILES = [
-  { slug: "beef", name: "Beef", image: "/images/home/beef-white-1.webp" },
-  { slug: "chicken", name: "Chicken", image: "/images/home/chicken-white-1.webp" },
-  { slug: "pork", name: "Pork", image: "/images/home/pork-white-1.webp" },
-  { slug: "sides", name: "Sides", image: "/images/home/sides-white-1.webp" },
+  {
+    slug: "beef",
+    name: "Beef",
+    icon: "/images/home/beef-white-1.webp",
+    bg: "/images/home/tile-bg-beef.webp",
+  },
+  {
+    slug: "chicken",
+    name: "Chicken",
+    icon: "/images/home/chicken-white-1.webp",
+    bg: "/images/home/tile-bg-chicken.webp",
+  },
+  {
+    slug: "pork",
+    name: "Pork",
+    icon: "/images/home/pork-white-1.webp",
+    bg: "/images/home/tile-bg-pork.webp",
+  },
+  {
+    slug: "sides",
+    name: "Sides",
+    icon: "/images/home/sides-white-1.webp",
+    bg: "/images/home/tile-bg-sides.webp",
+  },
   {
     slug: "smokersgrills",
     name: "Smokers & Grills",
-    image: "/images/home/smokers-grills-white-1.webp",
+    icon: "/images/home/smokers-grills-white-1.webp",
+    bg: "/images/home/tile-bg-smokersgrills.webp",
   },
-  { slug: "rubs", name: "Rubs", image: "/images/home/rubs-white-1.webp" },
-  { slug: "sauces", name: "Sauces", image: "/images/home/sauces-white-1.webp" },
-  { slug: "grilltips", name: "Grill Tips", image: "/images/home/grill-tips-white-1.webp" },
+  {
+    slug: "rubs",
+    name: "Rubs",
+    icon: "/images/home/rubs-white-1.webp",
+    bg: "/images/home/tile-bg-rubs.webp",
+  },
+  {
+    slug: "sauces",
+    name: "Sauces",
+    icon: "/images/home/sauces-white-1.webp",
+    bg: "/images/home/tile-bg-sauces.webp",
+  },
+  {
+    slug: "grilltips",
+    name: "Grill Tips",
+    icon: "/images/home/grill-tips-white-1.webp",
+    bg: "/images/home/tile-bg-grilltips.webp",
+  },
 ];
 
 const SEASONAL_FAVORITES = [
@@ -63,36 +99,31 @@ const FREE_REPORTS = [
   },
 ];
 
-function FlipTile({ slug, name, image }: { slug: string; name: string; image: string }) {
+function FlipTile({
+  slug,
+  name,
+  icon,
+  bg,
+}: {
+  slug: string;
+  name: string;
+  icon: string;
+  bg: string;
+}) {
   return (
     <div className="elementor-column elementor-col-25 elementor-inner-column elementor-element">
       <div className="elementor-widget-wrap elementor-element-populated">
-        <div className="elementor-element elementor-flip-box--effect-fade elementor-widget elementor-widget-flip-box">
-          <div className="elementor-widget-container">
-            <div className="elementor-flip-box">
-              <div className="elementor-flip-box__layer elementor-flip-box__front">
-                <div className="elementor-flip-box__layer__overlay">
-                  <div className="elementor-flip-box__layer__inner">
-                    <div className="elementor-flip-box__image">
-                      <Image src={image} alt={name} width={345} height={312} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <Link
-                className="elementor-flip-box__layer elementor-flip-box__back"
-                href={`/category/${slug}/`}
-              >
-                <div className="elementor-flip-box__layer__overlay">
-                  <div className="elementor-flip-box__layer__inner" />
-                </div>
-              </Link>
-            </div>
+        <Link href={`/category/${slug}/`} className={styles.tile}>
+          <Image src={bg} alt="" fill className={styles.tileBg} sizes="345px" />
+          <div className={styles.tileOverlay}>
+            <Image src={icon} alt={name} width={70} height={70} className={styles.tileIcon} />
           </div>
-        </div>
+        </Link>
         <div className="elementor-element elementor-widget elementor-widget-heading">
           <div className="elementor-widget-container">
-            <h4 className="elementor-heading-title elementor-size-default">{name}</h4>
+            <h4 className={`elementor-heading-title elementor-size-default ${styles.tileLabel}`}>
+              {name}
+            </h4>
           </div>
         </div>
       </div>
@@ -278,9 +309,18 @@ export default function HomePage() {
               <section className="elementor-section elementor-inner-section elementor-element elementor-element-1a0bed2 elementor-section-boxed elementor-section-height-default">
                 <div className="elementor-container elementor-column-gap-default">
                   <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0253f78">
-                    <div className="elementor-widget-wrap elementor-element-populated">
+                    <div className={`elementor-widget-wrap elementor-element-populated ${styles.sidebarBoxWrap}`}>
+                      <Image
+                        src="/images/home/sidebar-bg-guide.webp"
+                        alt=""
+                        fill
+                        className={styles.sidebarBoxBg}
+                        sizes="400px"
+                      />
+                      <div className={styles.sidebarBoxOverlay} />
+                      <div className={styles.sidebarBoxContent}>
                       <div className="elementor-element elementor-widget elementor-widget-heading">
-                        <div className="elementor-widget-container">
+                        <div className={`elementor-widget-container ${styles.sidebarHeadingBar}`}>
                           <h4 className="elementor-heading-title elementor-size-default">
                             Download Your Free Meat Smoking Guide
                           </h4>
@@ -288,7 +328,7 @@ export default function HomePage() {
                       </div>
                       <div className={styles.guideWidget}>
                         <div className="content">
-                          <p style={{ fontSize: 13, lineHeight: "20px", textAlign: "center" }}>
+                          <p className={styles.guideIntro}>
                             <strong>Enter your Name and Email Below </strong>
                             <br />
                             <strong>For Instant Access</strong>
@@ -350,6 +390,7 @@ export default function HomePage() {
                           </div>
                         </form>
                       </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -358,16 +399,25 @@ export default function HomePage() {
               <section className="elementor-section elementor-inner-section elementor-element elementor-element-0b86273 elementor-section-boxed elementor-section-height-default">
                 <div className="elementor-container elementor-column-gap-default">
                   <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-30994a1">
-                    <div className="elementor-widget-wrap elementor-element-populated">
+                    <div className={`elementor-widget-wrap elementor-element-populated ${styles.sidebarBoxWrap}`}>
+                      <Image
+                        src="/images/home/sidebar-bg-reports.webp"
+                        alt=""
+                        fill
+                        className={styles.sidebarBoxBg}
+                        sizes="400px"
+                      />
+                      <div className={`${styles.sidebarBoxOverlay} ${styles.sidebarBoxOverlayStrong}`} />
+                      <div className={styles.sidebarBoxContent}>
                       <div className="elementor-element elementor-widget elementor-widget-heading">
-                        <div className="elementor-widget-container">
+                        <div className={`elementor-widget-container ${styles.sidebarHeadingBar}`}>
                           <h4 className="elementor-heading-title elementor-size-default">
                             Free Reports
                           </h4>
                         </div>
                       </div>
                       <div className="elementor-element elementor-nav-menu__text-align-aside elementor-widget elementor-widget-nav-menu">
-                        <div className="elementor-widget-container">
+                        <div className={`elementor-widget-container ${styles.sidebarLinks}`}>
                           <nav className="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical">
                             <ul className="elementor-nav-menu">
                               {FREE_REPORTS.map((r) => (
@@ -380,6 +430,7 @@ export default function HomePage() {
                             </ul>
                           </nav>
                         </div>
+                      </div>
                       </div>
                     </div>
                   </div>

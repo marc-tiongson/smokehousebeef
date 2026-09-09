@@ -1,16 +1,107 @@
-.guideWidget {
-  margin: 0;
-  padding: 5px;
-  background: #fff;
-  border: 3px solid #fff;
-  border-radius: 5px;
-  width: 95%;
+.tile {
+  position: relative;
+  display: block;
+  height: 200px;
+  border-radius: 4px;
   overflow: hidden;
+}
+
+.tileBg {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tile:hover .tileBg {
+  transform: scale(1.05);
+}
+
+.tileOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(112, 34, 16, 0.6);
+}
+
+.tileLabel {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebarBoxWrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.sidebarBoxBg {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.sidebarBoxOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 0, 0, 0.51);
+  z-index: 1;
+}
+
+.sidebarBoxOverlayStrong {
+  background: rgba(6, 0, 0, 0.7);
+}
+
+.sidebarBoxContent {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
+.sidebarHeadingBar {
+  background: var(--color-brand-dark);
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebarHeadingBar h4 {
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.sidebarLinks :global(.elementor-item) {
+  color: var(--color-white);
+  font-size: 14px;
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebarLinks :global(.elementor-item):hover {
+  color: var(--color-accent);
+}
+
+.guideWidget {
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.guideIntro {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-white);
 }
 
 .guideWidget :global(.bullets ul) {
   padding: 0;
-  margin: 0;
+  margin: 16px 0;
   list-style: none;
 }
 
@@ -18,7 +109,7 @@
   margin-left: 10px;
   padding-left: 20px;
   padding-bottom: 5px;
-  color: #000;
+  color: var(--color-white);
   position: relative;
 }
 
@@ -30,10 +121,9 @@
 }
 
 .guideHeadline {
-  color: #000;
+  color: var(--color-white);
   font-weight: bold;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0;
   text-align: center;
 }
 

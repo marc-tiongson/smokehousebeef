@@ -1,36 +1,94 @@
 .wrap {
-  padding: 50px 20px 70px;
+  padding: 50px 20px 30px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
 }
 
-.intro {
-  font-size: 30px;
-  margin-bottom: 12px;
+.hero {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 480px;
 }
 
-.subtext {
-  font-size: 15px;
-  color: var(--color-grey);
-  margin-bottom: 30px;
+.heroBg {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 0, 0, 0.55);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  color: var(--color-white);
+}
+
+.heroContent h1 {
+  color: var(--color-white);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.heroSocial {
+  display: flex;
+  gap: 14px;
+}
+
+.heroSocial a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.heroSocial a:hover {
+  background: var(--color-accent);
 }
 
 .formCard h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.optinSection {
+  padding: 20px 20px 60px;
 }
 
 .optinCard {
   background: var(--color-bg-light);
   border-radius: 8px;
   padding: 36px 28px;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 @media (max-width: 860px) {
   .wrap {
     grid-template-columns: 1fr;
-    gap: 40px;
+  }
+
+  .hero {
+    min-height: 320px;
   }
 }
