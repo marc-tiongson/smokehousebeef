@@ -1,286 +1,70 @@
-.section {
-  padding: 50px 20px;
-}
-
-.sectionTitle {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.sectionSubtitle {
-  text-align: center;
-  color: var(--color-grey);
-  margin-bottom: 30px;
-}
-
-.tileGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-  padding: 16px;
-  border-radius: 8px;
-  background: var(--color-primary);
-  transition: transform 0.2s ease;
-}
-
-.tile:hover {
-  transform: translateY(-4px);
-}
-
-.tile span {
-  color: var(--color-white);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-.tile:hover span {
-  color: var(--color-accent);
-}
-
-.tileImage {
-  width: 100%;
-  height: auto;
-}
-
-.welcome {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-  padding: 50px 20px;
-}
-
-.welcomeTitle {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-.welcomeText {
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.learnMore {
-  display: inline-block;
-  padding: 12px 28px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-weight: 600;
-  border-radius: 4px;
-}
-
-.learnMore:hover {
-  background: var(--color-accent);
-  color: var(--color-primary);
-}
-
-.welcomeImage {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.favoritesGrid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 50px;
-}
-
-.favoritesCards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.favoriteCard {
-  border-radius: 8px;
+.guideWidget {
+  margin: 0;
+  padding: 5px;
+  background: #fff;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  width: 95%;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-.favoriteCard img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+.guideWidget :global(.bullets ul) {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.favoriteBadge {
-  display: inline-block;
-  margin: 12px 12px 0;
-  padding: 3px 10px;
-  background: var(--color-accent);
-  color: var(--color-primary);
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 3px;
-}
-
-.favoriteCard h4 {
-  padding: 8px 14px 0;
-  font-size: 16px;
-}
-
-.favoriteCard p {
-  padding: 8px 14px 0;
-  font-size: 13px;
-  color: var(--color-grey);
-}
-
-.readMore {
-  display: inline-block;
-  padding: 10px 14px 16px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-accent);
-}
-
-.guideBox {
-  background: var(--color-bg-light);
-  border-radius: 8px;
-  padding: 26px;
-  text-align: center;
-  align-self: start;
-}
-
-.guideBox h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.checklist {
-  margin: 16px 0;
-  text-align: left;
-}
-
-.checklist li {
-  padding: 4px 0 4px 22px;
+.guideWidget :global(.bullets ul li) {
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  color: #000;
   position: relative;
-  font-size: 14px;
 }
 
-.checklist li:before {
+.guideWidget :global(.bullets ul li):before {
   content: "✓";
   position: absolute;
   left: 0;
   color: var(--color-accent);
-  font-weight: 700;
 }
 
-.aweberForm {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.guideHeadline {
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 .aweberForm input[type="text"] {
-  padding: 10px 12px;
-  border: 1px solid var(--color-grey);
-  border-radius: 4px;
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  font-size: 12px;
 }
 
-.aweberForm button {
-  padding: 12px;
+.guideSubmit {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 24px;
   background: var(--color-accent);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  font-weight: bold;
   color: var(--color-primary);
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
-.aweberForm button:hover {
-  opacity: 0.9;
+.guidePrivacy {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #8c8089;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.privacyNote {
-  font-size: 11px;
-  color: var(--color-grey);
-}
-
-.privacyNote a {
+.guidePrivacy a {
   text-decoration: underline;
-}
-
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-}
-
-.reportsTitle {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.reportsList {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px 40px;
-}
-
-.reportsList a {
-  font-size: 15px;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--color-bg-light);
-  display: block;
-}
-
-.reportsList a:hover {
-  color: var(--color-accent);
-}
-
-.iconChecklist {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-
-.iconChecklist li {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.iconChecklist li:before {
-  content: "✓ ";
-  color: var(--color-accent);
-}
-
-@media (max-width: 900px) {
-  .tileGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .welcome {
-    grid-template-columns: 1fr;
-  }
-
-  .favoritesGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .favoritesCards {
-    grid-template-columns: 1fr;
-  }
-
-  .reportsList {
-    grid-template-columns: 1fr;
-  }
 }

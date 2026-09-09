@@ -1,3 +1,21 @@
+@import "../styles/vendor/frontend.min.css";
+@import "../styles/vendor/widget-heading.min.css";
+@import "../styles/vendor/widget-image.min.css";
+@import "../styles/vendor/widget-social-icons.min.css";
+@import "../styles/vendor/widget-divider.min.css";
+@import "../styles/vendor/widget-icon-list.min.css";
+@import "../styles/vendor/widget-form.min.css";
+@import "../styles/vendor/widget-posts.min.css";
+@import "../styles/vendor/widget-flip-box.min.css";
+@import "../styles/vendor/widget-nav-menu.min.css";
+@import "../styles/vendor/sticky.min.css";
+@import "../styles/vendor/kit-variables.css";
+@import "../styles/vendor/home-inline.css";
+@import "../styles/vendor/single-post-inline.css";
+@import "../styles/vendor/archive-inline.css";
+@import "../styles/vendor/contact-inline.css";
+@import "../styles/vendor/about-inline.css";
+
 :root {
   /* Colors extracted from the site's Elementor global kit */
   --color-primary: #060000;
@@ -10,7 +28,7 @@
   --color-footer-bg: #060000;
   --color-error: #ff0000;
 
-  --font-body: var(--font-poppins), Arial, Helvetica, sans-serif;
+  --font-body: var(--font-poppins), "Poppins", Arial, Helvetica, sans-serif;
 
   --content-max-width: 1140px;
 }
@@ -32,8 +50,9 @@ body {
   color: var(--color-text);
   background: var(--color-white);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

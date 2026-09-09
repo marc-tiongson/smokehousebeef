@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import categoriesData from "../../content/categories.json";
 
-export type Category = { slug: string; name: string };
+export type Category = { slug: string; name: string; icon: string };
 
 export type RecipeFrontmatter = {
   title: string;
